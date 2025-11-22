@@ -38,7 +38,24 @@ export default function Dashboard() {
               <span className="text-2xl font-bold gradient-text">Divine Connect</span>
             </Link>
             
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4">
+              {/* Crisis Support Button */}
+              <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center space-x-2">
+                <MessageCircle className="w-5 h-5" />
+                <span className="hidden sm:inline">Talk Now</span>
+              </button>
+              
+              {/* Live Counter */}
+              <div className="hidden md:flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-lg">
+                <div className="relative">
+                  <span className="flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                </div>
+                <span className="text-sm font-semibold text-green-900">127 Online</span>
+              </div>
+              
               <button className="relative hover:text-primary-600 transition">
                 <Bell className="w-6 h-6" />
                 <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-xs flex items-center justify-center">3</span>
@@ -50,7 +67,7 @@ export default function Dashboard() {
                 <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
                   RK
                 </div>
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                   <div className="font-semibold">Rahul Kumar</div>
                   <div className="text-xs text-gray-500">Premium Member</div>
                 </div>
@@ -133,13 +150,16 @@ export default function Dashboard() {
               <div className="flex justify-between items-start">
                 <div>
                   <h1 className="text-3xl font-bold mb-2">Welcome back, Rahul!</h1>
-                  <p className="text-primary-100 mb-6">
-                    Your personalized astrological insights are ready
+                  <p className="text-primary-100 mb-2">
+                    How can we help you find peace today?
                   </p>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-6">
+                    <span className="text-sm font-semibold">✨ 5 Minutes FREE • 100% Anonymous • No Card Required</span>
+                  </div>
                   <div className="flex flex-wrap gap-3">
                     <button className="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition flex items-center">
                       <MessageCircle className="w-5 h-5 mr-2" />
-                      Chat with Astrologer
+                      Start Free Chat
                     </button>
                     <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white px-6 py-3 rounded-lg font-semibold transition flex items-center">
                       <Video className="w-5 h-5 mr-2" />
@@ -190,7 +210,7 @@ export default function Dashboard() {
             {/* Today's Horoscope */}
             <div className="card">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold">Today&apos;s Horoscope</h2>
+                <h2 className="text-2xl font-bold">Your Daily Guidance</h2>
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
                   <Moon className="w-4 h-4" />
                   <span>Taurus • Nov 22, 2025</span>
@@ -422,47 +442,47 @@ export default function Dashboard() {
 
             {/* Quick Actions */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer">
+              <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer border-2 border-red-100">
                 <Heart className="w-12 h-12 text-red-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Kundli Matching</h3>
+                <h3 className="text-xl font-bold mb-2">Relationship Peace</h3>
                 <p className="text-gray-600 mb-4">
-                  Check compatibility for marriage with detailed Kundli analysis
+                  Reduce relationship stress. Get compatibility insights and actionable steps for harmony.
                 </p>
                 <button className="text-red-600 font-semibold flex items-center">
-                  Start Matching <ChevronRight className="w-5 h-5" />
+                  Find Peace Now <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer border-2 border-blue-100">
                 <Briefcase className="w-12 h-12 text-blue-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Career Report</h3>
+                <h3 className="text-xl font-bold mb-2">Career Clarity</h3>
                 <p className="text-gray-600 mb-4">
-                  Get detailed insights about your career path and opportunities
+                  Stop career anxiety. Your personalized action plan for the next best step.
                 </p>
                 <button className="text-blue-600 font-semibold flex items-center">
-                  Get Report <ChevronRight className="w-5 h-5" />
+                  Get Clarity <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer border-2 border-green-100">
                 <TrendingUp className="w-12 h-12 text-green-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Financial Forecast</h3>
+                <h3 className="text-xl font-bold mb-2">Financial Stress Relief</h3>
                 <p className="text-gray-600 mb-4">
-                  Understand your financial future and investment timing
+                  Reduce money worries. Karma-focused actions for financial stability and growth.
                 </p>
                 <button className="text-green-600 font-semibold flex items-center">
-                  View Forecast <ChevronRight className="w-5 h-5" />
+                  Reduce Stress <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer">
+              <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 hover:shadow-xl transition cursor-pointer border-2 border-purple-100">
                 <Moon className="w-12 h-12 text-purple-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Personalized Remedies</h3>
+                <h3 className="text-xl font-bold mb-2">Your Action Plan Today</h3>
                 <p className="text-gray-600 mb-4">
-                  Get customized mantras, gemstones, and remedies for your chart
+                  Daily karma tasks: Mantras, actions, and remedies you can do right now for peace.
                 </p>
                 <button className="text-purple-600 font-semibold flex items-center">
-                  Get Remedies <ChevronRight className="w-5 h-5" />
+                  Start Today <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
             </div>
