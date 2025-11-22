@@ -74,7 +74,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Your Trusted <span className="gradient-text">Astrology Partner</span> for Life's Journey
+                Your Trusted <span className="gradient-text">Astrology Partner</span> for Life&apos;s Journey
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Connect with expert Vedic astrologers 24/7. Get personalized guidance for relationships, 
